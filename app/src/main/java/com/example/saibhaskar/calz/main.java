@@ -11,7 +11,7 @@ public class main extends AppCompatActivity {
 
 
     double result = 0;
-    String output;
+    String output = null;
     int[] vals = new int[10];
     TextView answer ;
     EditText out ;
@@ -20,6 +20,8 @@ public class main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        out = (EditText)findViewById(R.id.screen);
+        answer = (TextView)findViewById(R.id.ans);
     }
 
      public void clear(View view) {
