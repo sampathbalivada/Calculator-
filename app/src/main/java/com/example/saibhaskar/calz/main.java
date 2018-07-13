@@ -45,6 +45,7 @@ public class main extends AppCompatActivity {
     }
 
     public void back(View view) {
+        if(output.length()!=0)
         output = removelast(output);
         screen();
     }
@@ -138,7 +139,7 @@ public class main extends AppCompatActivity {
              ++i;
          }
          i=0;
-        String l;
+        String l = "";
         while (i < output.length()) {
             if (outputs[i] == '.') {
                 l = "0.";
