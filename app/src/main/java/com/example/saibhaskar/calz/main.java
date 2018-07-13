@@ -132,7 +132,7 @@ public class main extends AppCompatActivity {
      public void equal(View view) {
          double[] vals = new double[10];
          double l,m;
-        int i = 0, j = 0, k = 0;
+        int i = 0, j = 0, k = 0,t;
         char[] outputs = output.toCharArray();
         char[] oper = new char [10];
          while(i<10) {
@@ -142,7 +142,8 @@ public class main extends AppCompatActivity {
          i=0;
         while (i < output.length()) {
             if (outputs[i] == '.') {++i; l = 0;m=0;
-                while (i < output.length() && outputs[i] != '+' && outputs[i] != '-' && outputs[i] != '*' && outputs[i] != '%' && outputs[i] != '/' )  {
+                while (i < output.length() &&
+                        outputs[i] != '+' && outputs[i] != '-' && outputs[i] != '*' && outputs[i] != '%' && outputs[i] != '/' )  {
                     ++m;
                     l = (l * 10) +  Character.getNumericValue(outputs[i]);
                     ++i;
@@ -161,7 +162,9 @@ public class main extends AppCompatActivity {
                         ++i;
                 }
                 if (i < output.length()) {
-                    vals[j] = (vals[j] * 10) +  Character.getNumericValue(outputs[i]);
+                    if(outputs[i] == '-') { t = -1;++i;}  else {t =1;}
+                    vals[j] = (vals[j] * 10 ) +  Character.getNumericValue(outputs[i]);
+                    vals[j]*=t;
                     ++i;
                 }
             }
