@@ -11,7 +11,7 @@ public class main extends AppCompatActivity {
 
 
     double result = 0;
-    String output = null;
+    String output = "";
     int[] vals = new int[10];
     TextView answer ;
     EditText out ;
@@ -133,6 +133,11 @@ public class main extends AppCompatActivity {
         int i = 0, j = 0, k = 0;
         char[] outputs = output.toCharArray();
         char[] oper = new char [10];
+         while(i<10) {
+             vals[i] = 0;
+             ++i;
+         }
+         i=0;
         String l;
         while (i < output.length()) {
             if (outputs[i] == '.') {
@@ -155,7 +160,7 @@ public class main extends AppCompatActivity {
                         ++i;
                 }
                 if (i < output.length()) {
-                    vals[j] = vals[j] + 10 * Character.getNumericValue(outputs[i]);
+                    vals[j] = (vals[j] * 10) +  Character.getNumericValue(outputs[i]);
                     ++i;
                 }
             }
@@ -179,6 +184,7 @@ public class main extends AppCompatActivity {
                     result /= vals[k + 1];
                     break;
             }
+            ++k;
         }
         ans();
     }
