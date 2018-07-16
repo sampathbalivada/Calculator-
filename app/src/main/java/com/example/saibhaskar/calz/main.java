@@ -12,7 +12,6 @@ public class main extends AppCompatActivity {
 
     double result = 0;
     String output = "";
-    int[] vals = new int[10];
     TextView answer ;
     EditText out ;
 
@@ -131,7 +130,9 @@ public class main extends AppCompatActivity {
     }
 
      public void equal(View view) {
-        int i = 0, j = 0, k = 0;
+         double[] vals = new double[10];
+         double l,m;
+        int i = 0, j = 0, k = 0,t;
         char[] outputs = output.toCharArray();
         char[] oper = new char [10];
          while(i<10) {
@@ -139,15 +140,15 @@ public class main extends AppCompatActivity {
              ++i;
          }
          i=0;
-        String l = "";
         while (i < output.length()) {
-            if (outputs[i] == '.') {
-                l = "0.";
-                while (outputs[i] != '+' || outputs[i] != '-' || outputs[i] != '*' || outputs[i] != '%' || outputs[i] != '/' || i < output.length()) {
-                    l = l + outputs[i];
+            if (outputs[i] == '.') {++i; l = 0;m=0;
+                while (i < output.length() &&
+                        outputs[i] != '+' && outputs[i] != '-' && outputs[i] != '*' && outputs[i] != '%' && outputs[i] != '/' )  {
+                    ++m;
+                    l = (l * 10) +  Character.getNumericValue(outputs[i]);
                     ++i;
-                }
-                vals[j] = vals[j] + Integer.parseInt(l);
+                }l = l * Math.pow(0.1,m);
+                vals[j] = vals[j] + l;
             }
             if (i < output.length()) {
                 switch (outputs[i]) {
@@ -161,7 +162,9 @@ public class main extends AppCompatActivity {
                         ++i;
                 }
                 if (i < output.length()) {
-                    vals[j] = (vals[j] * 10) +  Character.getNumericValue(outputs[i]);
+                    if(outputs[i] == '-') { t = -1;++i;}  else {t =1;}
+                    vals[j] = (vals[j] * 10 ) +  Character.getNumericValue(outputs[i]);
+                    vals[j]*=t;
                     ++i;
                 }
             }
