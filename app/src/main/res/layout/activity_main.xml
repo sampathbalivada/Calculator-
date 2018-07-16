@@ -19,7 +19,6 @@
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
             android:fontFamily="sans-serif-condensed"
-            android:onClick="ans"
             android:padding="10sp"
             android:paddingTop="5sp"
             android:text="@string/zero_view"
@@ -33,17 +32,19 @@
             android:id="@+id/screen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
             android:cursorVisible="false"
             android:ems="10"
             android:fontFamily="sans-serif-condensed"
             android:inputType="none"
-            android:onClick="screen"
             android:textAlignment="viewEnd"
             android:textColor="#f0f0f0"
             android:textSize="65sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:textIsSelectable="true"/>
 
     </LinearLayout>
 

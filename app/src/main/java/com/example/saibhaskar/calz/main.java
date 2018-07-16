@@ -15,6 +15,7 @@ public class main extends AppCompatActivity {
     TextView answer ;
     EditText out ;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +39,7 @@ public class main extends AppCompatActivity {
     private void screen() {
         out.setText(output);
     }
+
 
     String removelast(String s) {
         return s.substring(0, s.length()-1);
