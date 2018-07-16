@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/calzz.iml" filepath="$PROJECT_DIR$/calzz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/calz.iml" filepath="$PROJECT_DIR$/calz.iml" />
+      <module fileurl="file://C:\Users\sai bhaskar\AndroidStudioProjects\calz\calzz.iml" filepath="C:\Users\sai bhaskar\AndroidStudioProjects\calz\calzz.iml" />
     </modules>
   </component>
 </project>
