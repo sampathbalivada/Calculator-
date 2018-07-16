@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">calz</string>
+    <string name="app_name">Calculator++</string>
     <string name="B">"\u2190"</string>
     <string name="C">C</string>
     <string name="Decimal">.</string>
