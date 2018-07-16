@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">calz</string>
-    <string name="B">B</string>
+    <string name="B">"\u2190"</string>
     <string name="C">C</string>
     <string name="Decimal">.</string>
     <string name="Equals">=</string>
     <string name="Percentage">%</string>
-    <string name="Divide">/</string>
-    <string name="Multiply">x</string>
+    <string name="Divide">"\u00f7"</string>
+    <string name="Multiply">"\u00d7"</string>
     <string name="Minus">-</string>
     <string name="Plus">+</string>
     <string name="nine">9</string>
@@ -19,5 +19,6 @@
     <string name="two">2</string>
     <string name="one">1</string>
     <string name="zero">0</string>
+    <string name="zero_view">0.0</string>
 </resources>
 
