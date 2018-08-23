@@ -1,4 +1,4 @@
-# calzz
+# Calculator++
 Contributors:
 * P Sai Bhaskar (Java)
 * B Sai Sampath Kumar (XML/UI)
